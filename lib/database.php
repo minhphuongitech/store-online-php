@@ -31,7 +31,7 @@ private function connectDB(){
  // Select or Read data
 public function select($query){
   $result = pg_query($conn, $query);
-  if(!$result){
+  if($result){
     return $result;
   } else {
     return false;
