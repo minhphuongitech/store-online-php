@@ -12,12 +12,14 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $catName = $_POST['catName'];
-        $updateCat = $cat->update_category($id, $catName);
+        $catNameJp = $_POST['catNameJp'];
+        $catNameVn = $_POST['catNameVn'];
+        $updateCat = $cat->update_category($id, $catName, $catNameJp, $catNameVn);
     }
 ?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Sửa danh mục sản phẩm</h2>
+                <h2>Update Category</h2>
                <div class="block copyblock"> 
                 <?php 
                     if(isset($updateCat)) {
@@ -34,7 +36,17 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" name="catName" placeholder="Sửa danh mục sản phẩm..." class="medium" value="<?php echo $result['catName'] ?>" />
+                                <input type="text" name="catName" placeholder="English Name" class="medium" value="<?php echo $result['catName'] ?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="catNameJp" placeholder="Japanese Name" class="medium" value="<?php echo $result['catNameJp'] ?>" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="catNameVn" placeholder="Vietnamese Name" class="medium" value="<?php echo $result['catNameVn'] ?>" />
                             </td>
                         </tr>
 						<tr> 

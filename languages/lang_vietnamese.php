@@ -134,4 +134,6 @@
 	define('_UPDATE_PASSWORD_FAILED', 'Cập nhật mật khẩu thất bại.');
 	define('_CLICK_LINK_FROM_EMAL', 'Vui lòng truy cập vào trang này từ link trong email bạn nhận được.');
 	define('_PAGE_NOT_FOUND', 'Không tìm thấy trang truy cập.');
+	define('_UPDATE_CATEGORY', 'Sửa danh mục sản phẩm');
+	
 ?>

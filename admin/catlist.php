@@ -21,7 +21,9 @@
 					<thead>
 						<tr>
 							<th>Serial No.</th>
-							<th>Category Name</th>
+							<th>English Name</th>
+							<th>Japanese Name</th>
+							<th>Vietnamese Name</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -36,6 +38,8 @@
 						<tr class="odd gradeX">
 										<td><?php echo $i ?></td>
 										<td><?php echo $result['catName']?></td>
+										<td><?php echo $result['catNameJp']?></td>
+										<td><?php echo $result['catNameVn']?></td>
 										<td><a href="catedit.php?catid=<?php echo $result['catId'] ?>">Edit</a> || <a onclick="return confirm('Do you really want to delete?')" href="?delid=<?php echo $result['catId'] ?>">Delete</a></td>
 									</tr>
 						<?php

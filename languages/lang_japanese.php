@@ -136,4 +136,5 @@
 	define('_UPDATE_PASSWORD_FAILED', '新たなパスワードの更新は失敗しました。');
 	define('_CLICK_LINK_FROM_EMAL', '受信したメールのリンクからこのページにアクセスしてください。');
 	define('_PAGE_NOT_FOUND', 'ページが見つかりません。');
+	define('_UPDATE_CATEGORY', 'カテゴリー更新');
 ?>

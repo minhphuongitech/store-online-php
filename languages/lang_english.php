@@ -134,5 +134,6 @@
 	define('_UPDATE_PASSWORD_FAILED', 'New password update failed.');
 	define('_CLICK_LINK_FROM_EMAL', 'Please access this page from link in email which has been to you.');
 	define('_PAGE_NOT_FOUND', 'Page is not found.');
+	define('_UPDATE_CATEGORY', 'Update category');
 	
 ?>

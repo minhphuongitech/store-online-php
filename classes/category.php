@@ -22,17 +22,22 @@
 			$this->fm = new Format();
 		}
 
-		public function insert_category($catName) {
+		public function insert_category($catName, $catNameJp, $catNameVn) {
 			$catName = $this->fm->validation($catName);
-			
 			$catName = mysqli_real_escape_string($this->db->link, $catName);
+
+			$catNameJp = $this->fm->validation($catNameJp);
+			$catNameJp = mysqli_real_escape_string($this->db->link, $catNameJp);
+
+			$catNameVn = $this->fm->validation($catNameVn);
+			$catNameVn = mysqli_real_escape_string($this->db->link, $catNameVn);
 			
 
 			if(empty($catName)) {
 				$alert = "<span class='error'>Category must be not empty!</span>";
 				return $alert;
 			} else {
-				$query = "INSERT INTO tbl_category(catName) VALUES('$catName')";
+				$query = "INSERT INTO tbl_category(catName, catNameJp, catNameVn) VALUES('$catName','$catNameJp','$catNameVn')";
 				$result = $this->db->insert($query);
 				if($result == true) {
 					$alert = "<span class='success'>Insert category successfully</span>";
@@ -57,16 +62,24 @@
 			return $result;
 		}
 
-		public function update_category($catId, $catName) {
+		public function update_category($catId, $catName, $catNameJp, $catNameVn) {
 
 			$catName = $this->fm->validation($catName);
 			$catName = mysqli_real_escape_string($this->db->link, $catName);
+			$catNameJp = $this->fm->validation($catNameJp);
+			$catNameJp = mysqli_real_escape_string($this->db->link, $catNameJp);
+			$catNameVn = $this->fm->validation($catNameVn);
+			$catNameVn = mysqli_real_escape_string($this->db->link, $catNameVn);
 			$catId = mysqli_real_escape_string($this->db->link, $catId);
 
 			if(empty($catName)) {
 				$alert = "<span class='error'>Category must be not empty!</span>";
 			} else {
-				$query = "UPDATE tbl_category SET catName = '$catName' WHERE catId = $catId";
+				$query = "UPDATE tbl_category 
+						SET catName = '$catName',  
+						catNameJp = '$catNameJp',
+						catNameVn = '$catNameVn'
+						WHERE catId = $catId";
 				$result = $this->db->update($query);
 				if($result == true) {
 					$alert = "<span class='success'>Update category successfully</span>";

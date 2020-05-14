@@ -5,8 +5,9 @@
     $cat = new category();
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $catName = $_POST['catName'];
-
-        $insertCat = $cat->insert_category($catName);
+        $catNameJp = $_POST['catNameJp'];
+        $catNameVn = $_POST['catNameVn'];
+        $insertCat = $cat->insert_category($catName, $catNameJp, $catNameVn);
     }
 
 ?>
@@ -23,7 +24,17 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" name="catName" placeholder="Category Name..." class="medium" />
+                                <input type="text" name="catName" placeholder="English Name..." class="medium" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="catNameJp" placeholder="Japanese Name" class="medium"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="catNameVn" placeholder="Vietnamese Name" class="medium"/>
                             </td>
                         </tr>
 						<tr> 
