@@ -25,7 +25,7 @@
 
 //Server connect - Phuong-store
 //DATABASE_URL = postgres://vptkvztqawdxbo:4b2c8faded977f391839e37cc5c6d4961dff91ad53c56a7827763a3bb95298dd@ec2-52-201-55-4.compute-1.amazonaws.com:5432/d2rpv53ev2cigf
-define("DB_HOST", "ec2-52-201-55-4.compute-1.amazonaws.com");
+define("DB_HOST", "ec2-52-201-55-4.compute-1.amazonaws.com:5432");
 define("DB_USER", "vptkvztqawdxbo");
 define("DB_PASS", "4b2c8faded977f391839e37cc5c6d4961dff91ad53c56a7827763a3bb95298dd");
 define("DB_NAME", "d2rpv53ev2cigf");
