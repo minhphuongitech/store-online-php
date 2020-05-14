@@ -172,8 +172,7 @@
                                         <?php 
                                             $categoryList = $cat->show_category_site();
                                             if($categoryList) {
-                                                // while ($result = $categoryList->fetch_assoc()) {
-                                                while ($result = pg_fetch_assoc($categoryList)) {
+                                                while ($result = $categoryList->fetch_assoc()) {
                                         ?>
                                         <li><a style="padding-left: 10px" href="productbycat.php?catid=<?php echo $result['catId'] ?>">
                                             <?php 
