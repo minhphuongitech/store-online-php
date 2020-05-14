@@ -21,7 +21,7 @@
     <div class="content" >
     	<div class="content_top" >
     		<div class="heading" >
-    		<h3><?= _LOGIN._LOGOUT?></h3>
+    		<h3><?= _FEATURE_PRODUCTS?></h3>
     		</div>
     		<div class="clear">
     			<div class="slider-box-row">
@@ -71,7 +71,7 @@
 			</div> -->
 			<div class="content_bottom">
     		<div class="heading">
-    		<h3>New Products</h3>
+    		<h3><?= _NEW_PRODUCTS?></h3>
     		</div>
     		<div class="clear">
     			<div class="slider-box-row">
@@ -101,7 +101,7 @@
     	</div>
 			<div class="content_bottom">
     		<div class="heading">
-    		<h3>All Products</h3>
+    		<h3><?= _ALL_PRODUCTS?></h3>
     		</div>
     		<div class="clear">
     			<div class="slider-box-row">
