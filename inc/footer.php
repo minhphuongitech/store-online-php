@@ -3,43 +3,34 @@
    	  <div class="wrapper">	
 	     <div class="section group">
 				<div class="col_1_of_4 span_1_of_4">
-						<h4>Information</h4>
+					<h4><?= _INFORMATION?></h4>
 						<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Customer Service</a></li>
-						<li><a href="#"><span>Advanced Search</span></a></li>
-						<li><a href="#">Orders and Returns</a></li>
-						<li><a href="#"><span>Contact Us</span></a></li>
-						</ul>
-					</div>
-				<div class="col_1_of_4 span_1_of_4">
-					<h4>Why buy from us</h4>
-						<ul>
-						<li><a href="about.php">About Us</a></li>
-						<li><a href="faq.php">Customer Service</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="contact.php"><span>Site Map</span></a></li>
-						<li><a href="details.php"><span>Search Terms</span></a></li>
+						<li><a href="contact.php"><?= _CONTACT_US?></a></li>
+						<li><a href="#"><?= _FAQ?></a></li>	
+						<li><a href="#"><?= _ABOUT_US?></a></li>
+						<li><a href="#"><?= _CUSTOMER_SERVICE?></a></li>
+						<li><a href="#"><?= _PRIVACY_POLICY?></a></li>
 						</ul>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
-					<h4>My account</h4>
+					<h4><?= _MY_ACCOUNT?></h4>
 						<ul>
-							<li><a href="contact.php">Sign In</a></li>
-							<li><a href="index.php">View Cart</a></li>
-							<li><a href="#">My Wishlist</a></li>
-							<li><a href="#">Track My Order</a></li>
-							<li><a href="faq.php">Help</a></li>
+							<li><a href="login.php"><?= _SIGN_IN?></a></li>
+							<li><a href="register.php"><?= _CREATE_ACCOUNT?></a></li>
+							<li><a href="cart.php"><?= _CART?></a></li>
+							<li><a href="wishlist.php"><?= _WISHLIST?></a></li>
+							<li><a href="orderdetails.php"><?= _ORDERED?></a></li>
+							
 						</ul>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
-					<h4>Contact</h4>
-						<ul>
-							<li><span>+88-01713458599</span></li>
-							<li><span>+88-01813458552</span></li>
+					<h4><?= _CONTACT?></h4>
+						<ul style="color: white">
+							<li>❖ <?= _JAPAN?>:　 +81(0) 70-4511-1934</li>
+							<li>❖ <?= _VIETNAM?>: +84(0) 93-8687-071</li>
 						</ul>
 						<div class="social-icons">
-							<h4>Follow Us</h4>
+							<h4><?= _FOLLOW_US?></h4>
 					   		  <ul>
 							      <li class="facebook"><a href="#" target="_blank"> </a></li>
 							      <li class="twitter"><a href="#" target="_blank"> </a></li>
@@ -51,7 +42,7 @@
 				</div>
 			</div>
 			<div class="copy_right">
-				<p>Training with live project &amp; All rights Reseverd </p>
+				<p style="color: white">© 2020 PvSoft &amp; All rights Reserved</p>
 		   </div>
      </div>
     </div>

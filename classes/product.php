@@ -282,7 +282,7 @@
 					 INNER JOIN tbl_brand ON tbl_product.brandId = tbl_brand.brandId
 					 WHERE type = 1
 					 ORDER BY tbl_product.productId DESC
-					 LIMIT 4";
+					 LIMIT 5";
 			$result = $this->db->select($query);
 			return $result;
 		}
@@ -292,7 +292,7 @@
 					 FROM tbl_product INNER JOIN tbl_category ON tbl_product.catId = tbl_category.catId
 					 INNER JOIN tbl_brand ON tbl_product.brandId = tbl_brand.brandId
 					 ORDER BY tbl_product.productId DESC
-					 LIMIT 4";
+					 LIMIT 5";
 			$result = $this->db->select($query);
 			return $result;
 		}
@@ -409,10 +409,12 @@
 						$msg = "<span class='success'>Product added to compare list.</span>";
 						return $msg;
 					} else {
-						header('Location:404.php');
+						// header('Location:404.php');
+						echo "<script> location.replace('404.php'); </script>";
 					}	
 				} else {
-					header('Location:404.php');
+					// header('Location:404.php');
+					echo "<script> location.replace('404.php'); </script>";
 				}
 				
 			}

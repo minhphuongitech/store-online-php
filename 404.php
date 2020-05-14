@@ -13,7 +13,7 @@
     	<div class="cartoption">		
 			<div class="cartpage">
 				<div class="not_found">
-			    	<h3>Page is not found.</h3>
+			    	<h3><?= _PAGE_NOT_FOUND?></h3>
     			</div> 	   	
     		</div>  	
     	</div>

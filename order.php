@@ -4,7 +4,8 @@
 ?>
 <?php 
 	if(!Session::get('customer_login')) {
-		header('Location: login.php');
+		// header('Location: login.php');
+		echo "<script> location.replace('login.php'); </script>";
 	}
 ?>
 <style type="text/css">

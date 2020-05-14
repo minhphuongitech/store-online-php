@@ -54,7 +54,7 @@
         border: 1px solid;
         border-color: black;
         width: 50%;
-        height: 55px;
+        height: 75px;
     }
 
     .container_wrapper {
@@ -76,13 +76,13 @@
                 <div class="wrapper_method" align="center">
                     <br>
                     <div class="atag">
-                        <a class="grey" href="offlinepayment.php">Offline payment</a> 
-                        <a class="grey" href="onlinepayment.php">Online payment</a>
+                        <a class="grey" href="offlinepayment.php"><?= _OFFLINE_PAYMENT?></a> 
+                        <a class="grey" href="onlinepayment.php"><?= _ONLINE_PAYMENT?></a>
                     </div> 
                 </div>
                 <br>
                 <div class="atag">
-                        <a class="grey" href="offpay.php"><< Previous</a> 
+                        <a class="grey" href="offpay.php"><?= _PREVIOUS?></a> 
                     </div> 
             </div>
         	</div>

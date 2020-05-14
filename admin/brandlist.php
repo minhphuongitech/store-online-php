@@ -10,7 +10,7 @@
 ?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>brand List</h2>
+                <h2>Brand List</h2>
                 <?php 
                 	if(isset($delbrand)){
                 		echo $delbrand;

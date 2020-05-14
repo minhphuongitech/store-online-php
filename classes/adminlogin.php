@@ -44,7 +44,8 @@
 					Session::set('adminId', $value['adminId']);
 					Session::set('adminUser', $value['adminUser']);
 					Session::set('adminName', $value['adminName']);
-					header('Location:index.php');
+					// header('Location:index.php');
+					echo "<script> location.replace('index.php'); </script>";
 				} else {
 					$alert = "Username and password do not match!";
 					return $alert;

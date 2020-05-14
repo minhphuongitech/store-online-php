@@ -4,6 +4,10 @@
 
  <style type="text/css">
 
+ 	.content_top {
+ 		height: 200px;
+ 	}
+
 	span.error {
 		color: red;
 	}
@@ -20,13 +24,11 @@
     	<div class="section group">
     		<div class="content_top">
 	    		<div class="heading">
-	    			<h3>Payment status</h3>
+	    			<h3><?=_PAYMENT_STATUS ?></h3>
 	    		</div>
 
-    		<div class="clear"></div>
- 		</div>
- 		<br>
- 		<?php 
+    		<div class="clear">
+    			<?php 
  			$prodOrder = $ct->getOrder();
  			if($prodOrder) {
  				$grandTotalPrice = 0;
@@ -36,10 +38,15 @@
  				$grandTotalPrice += $grandTotalPrice * 0.08; // VAT 8%
  			}
  		?>
- 		<span class="success">Your payment was completed.</span><br>
  		<br>
- 		<span>Total price you've bought : <?php if(isset($grandTotalPrice)) echo $grandTotalPrice; else echo '0';?></span><br>
- 		<span><a href="orderdetails.php">We'll contact you soon. Click here</a> to view order details.</span>
+ 		<span class="success"><?=_YOUR_PAYMENT_WAS_COMPLETED?></span><br>
+ 		<br>
+ 		<span>❖　<?=_THE_TOTAL_PRICE_YOU_HAVE_BOUGHT?> <?php if(isset($grandTotalPrice)) echo $grandTotalPrice; else echo '0';?></span><br>
+ 		<span>❖　<a href="orderdetails.php"><?=_CLICK_HERE?></a> <?=_TO_VIEW_MORE_DETAILS?></span>
+    		</div>
+ 		</div>
+ 		<br>
+ 		
 
 	</div>	
  	</div>

@@ -81,24 +81,24 @@
     	<div class="section group">
     		<div class="content_top">
 	    		<div class="heading">
-	    			<h3>Search result <?php if(isset($_GET['keyword'])) echo ' : '.$_GET['keyword']; ?></h3>
+	    			<h3><?=_SEARCH_PRODUCTS?> <?php if(isset($_GET['keyword'])) echo ' : '.$_GET['keyword']; ?></h3>
 	    		</div>
     		<div class="clear"></div>
     		<div class="box_left">
 		    			<div class="cartpage">
-			    	<h2 style="font-size: 22px;">Products list</h2>
+			    	<h2 style="font-size: 22px;"><?=_PRODUCTS_LIST?></h2>
 						<table class="tblone">
 							<tr>
-								<th style="font-size: 16px" width="5%">No.</th>
-								<th style="font-size: 16px" width="20%">Product Name</th>
-								<th style="font-size: 16px" width="10%">Brand</th>
-								<th style="font-size: 16px" width="10%">Category</th>
-								<th style="font-size: 16px" width="15%">Image</th>
-								<th style="font-size: 16px" width="20%">Price</th>
-								<th style="font-size: 16px" width="20%">Action</th>
+								<th style="font-size: 16px" width="5%"><?= _NO?></th>
+								<th style="font-size: 16px" width="20%"><?= _PRODUCT_NAME?></th>
+								<th style="font-size: 16px" width="10%"><?= _BRAND?></th>
+								<th style="font-size: 16px" width="10%"><?= _CATEGORY?></th>
+								<th style="font-size: 16px" width="15%"><?= _IMAGE?></th>
+								<th style="font-size: 16px" width="20%"><?= _PRICE?></th>
+								<th style="font-size: 16px" width="20%"><?= _ACTION?></th>
 							</tr>
 							<?php 
-								if($searchProduct) {
+								if(isset($searchProduct) && !empty($searchProduct)) {
 									$i = 0;
 									while ($result = $searchProduct->fetch_assoc()) {
 										$i++;
@@ -110,7 +110,7 @@
 								<td><?php echo $result['catName'] ?></td>
 								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
 								<td><?php echo $result['price']; ?></td>
-								<td><a href="details.php?productid=<?php echo $result['productId'] ?>"> View </a></td>
+								<td><a href="details.php?productid=<?php echo $result['productId'] ?>"> <?= _VIEW?> </a></td>
 							</tr>
 							<?php 
 									}

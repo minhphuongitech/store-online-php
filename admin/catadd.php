@@ -12,7 +12,7 @@
 ?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Thêm danh mục mới</h2>
+                <h2>Add New Category</h2>
                <div class="block copyblock"> 
                 <?php 
                     if(isset($insertCat)) {
@@ -23,7 +23,7 @@
                     <table class="form">					
                         <tr>
                             <td>
-                                <input type="text" name="catName" placeholder="Vui lòng thêm danh mục sản phẩm..." class="medium" />
+                                <input type="text" name="catName" placeholder="Category Name..." class="medium" />
                             </td>
                         </tr>
 						<tr> 

@@ -32,7 +32,7 @@
     <div class="content">
     	<div class="cartoption">		
 			<div class="cartpage">
-			    	<h2>Your Cart</h2>
+			    	<h2><?= _YOUR_CART?></h2>
 			    	<?php 
 			    		if(isset($updatedResult)) {
 			    			echo $updatedResult;
@@ -43,12 +43,12 @@
 			    	?>
 						<table class="tblone">
 							<tr>
-								<th width="20%">Product Name</th>
-								<th width="10%">Image</th>
-								<th width="15%">Price</th>
-								<th width="25%">Quantity</th>
-								<th width="20%">Total Price</th>
-								<th width="10%">Action</th>
+								<th width="20%"><?= _PRODUCT_NAME?></th>
+								<th width="10%"><?= _IMAGE?></th>
+								<th width="15%"><?= _PRICE?></th>
+								<th width="25%"><?= _QUANTITY?></th>
+								<th width="20%"><?= _TOTAL_PRICE?></th>
+								<th width="10%"><?= _ACTION?></th>
 							</tr>
 							<?php 
 								$ct = new cart();
@@ -61,19 +61,19 @@
 							<tr>
 								<td><?php echo $result['productName'] ?></td>
 								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
-								<td><?php echo Format::formatNumberAsCurrency($result['price']).' đ'; ?></td>
+								<td><?php echo Format::formatNumberAsCurrency($result['price']).' Yen'; ?></td>
 								<td>
 									<form action="" method="post">
 										<input type="hidden" name="cartId" value="<?php echo $result['cartId'] ?>">
 										<input type="number" name="quantity" value="<?php echo $result['quantity'] ?>" min="1"/>
-										<input type="submit" name="submit" value="Update"/>
+										<input type="submit" name="submit" value="<?= _UPDATE?>"/>
 									</form>
 								</td>
 								<td><?php 
 									$quantityPrice = $result['price']*$result['quantity'];
 									$grandTotalPrice+=$quantityPrice;
-									echo Format::formatNumberAsCurrency($quantityPrice).' đ' ?></td>
-								<td><a onclick="return confirm('Do you really want to remove?')" href="?delid=<?php echo $result['cartId'] ?>">Remove</a></td>
+									echo Format::formatNumberAsCurrency($quantityPrice).' Yen' ?></td>
+								<td><a onclick="return confirm('Do you really want to remove?')" href="?delid=<?php echo $result['cartId'] ?>"><?= _REMOVE?></a> || <a href="details.php?productid=<?php echo $result['productId'] ?>"> <?=_VIEW?> </a></td>
 							</tr>
 							<?php 
 									}
@@ -86,10 +86,10 @@
 						?>
 						<table style="float:right;text-align:left;" width="40%">
 							<tr>
-								<th>Sub Total : </th>
+								<th><?= _SUB_TOTAL?> : </th>
 								<td><?php 
 									if(isset($grandTotalPrice)) { 
-										echo Format::formatNumberAsCurrency($grandTotalPrice).' đ'; 
+										echo Format::formatNumberAsCurrency($grandTotalPrice).' Yen'; 
 										Session::set('sub_total', $grandTotalPrice);
 									}
 									?></td>
@@ -99,14 +99,14 @@
 								<td><?php
 									if(isset($grandTotalPrice)) {
 										$vat = $grandTotalPrice*0.08;
-										echo Format::formatNumberAsCurrency($vat).' đ' ;
+										echo Format::formatNumberAsCurrency($vat).' Yen' ;
 									}?></td>
 							</tr>
 							<tr>
-								<th>Grand Total :</th>
+								<th><?= _GRAND_TOTAL?> :</th>
 								<td><?php 
 									if(isset($totalPrice)) {
-										echo Format::formatNumberAsCurrency($grandTotalPrice+$vat).' đ';
+										echo Format::formatNumberAsCurrency($grandTotalPrice+$vat).' Yen';
 									}
 									 ?> </td>
 							</tr>
@@ -128,9 +128,10 @@
     	</div>  	
        <div class="clear"></div>
     </div>
+      <?php
+			include 'inc/footer.php';
+		?>
  </div>
 
-  <?php
-	include 'inc/footer.php';
-?>
+
 

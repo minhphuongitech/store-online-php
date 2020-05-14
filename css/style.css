@@ -39,7 +39,7 @@ body{
 }
 .logo{
 	float:left;
-	width:33%;
+	/*width:33%;*/
 }
 /**** Header Top Right ****/
 .header_top_right{
@@ -165,15 +165,23 @@ input[type="number"] {
   color: #444;
   display: block;
   float: left;
-  font-size: 27px;
+  font-size: 12px;
   height: 38px;
   margin-left: 10px;
+  padding-top: 8px;
   text-align: center;
-  width: 144px;
+  width: 76px;
 }
 .login a {
 	color:#333;
+	text-decoration: none;
 }
+.change_language {
+  font-size: 10px;
+  margin: 10px;
+  float: left;
+}
+
 /*** Login ***/
 .register_account h3,.login_panel h3{
 	font-size: 22px;
@@ -181,16 +189,22 @@ input[type="number"] {
 	font-family: 'Monda', sans-serif;
 	padding-bottom:.4em;
 }
+
+.register_account{
+	color: #6C6C6C;
+}
+
 .register_account {
   background: #fff none repeat scroll 0 0;
   border: 1px solid #c0bebe;
   border-radius: 3px;
   float: left;
-  height: 284px;
+  /*height: 284px;*/
   padding: 20px;
-  width: 712px;
+  /*width: 712px;*/
+  margin: 5px;
 }
-.register_account form input[type="text"],.register_account form select{
+.register_account form input[type="text"],.register_account form select,.register_account form input[type="password"]{
 	font-size:12px;
 	color:black;
 	padding:8px;
@@ -199,7 +213,7 @@ input[type="number"] {
 	width:340px;
 }
 .register_account form select{
-	width:360px;
+	/*width:360px;*/
 	color:#666;
 }
 .register_account form input[type="text"].code{
@@ -222,8 +236,8 @@ input[type="number"] {
 
 .login_panel{
 	float:left;
-	width: 245px;
-	margin-right: 10px;
+	width: 99%;
+	margin: 5px;
 	padding:20px;
 	background:#FFF;
 	border:1px solid #C0BEBE;
@@ -235,7 +249,7 @@ input[type="number"] {
 	padding:8px;
 	outline:none;
 	margin:6px 0;
-	width:92%;
+	width:20%;
 }
 .login_panel form{
 	margin:15px 0;
@@ -272,6 +286,7 @@ p.note{
         box-shadow        : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
         -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
         cursor:pointer;   
+        background: red;
 }
 .search button{
 	padding:12px 30px;
@@ -414,9 +429,10 @@ p.note{
 .header_bottom{margin-bottom:10px;}
 /**** Header Botttom Left ****/
 .header_bottom_left{
-	float:left;
-	width:50%;
-	padding-top:6px;
+	float: left;
+    width: 49%;
+    padding-top: 6px;
+    margin-left: 5px;
 }
 .header_bottom_img{
 	float:left;
@@ -520,12 +536,13 @@ p.note{
 .header_bottom_right_images{
 	float:left;
 	width:49%;
-	margin-left:1%;
+	margin-left:5px;
 	padding-top: 15px;
 }
 .content{
 	padding:20px 0;
 	background:#FFF;
+	min-height: 500px;
 }
 .content h2{ 
 	font-size:23px;
@@ -536,12 +553,17 @@ p.note{
 	padding:15px 20px;
 	border:1px solid #EBE8E8;
 	border-radius:3px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 25px;
 }
 .content_bottom{
 	padding:15px 20px;
 	border:1px solid #EBE8E8;
 	border-radius:3px;
 	margin-top:2.6%;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 .heading{
 	float:left;
@@ -702,16 +724,8 @@ p.note{
 	padding:0 1%;
 }
 .footer{
-	position:relative;
-	background: #414045; 
-	background: -moz-linear-gradient(top,  #414045 55%, #2f2e33 100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(55%,#414045), color-stop(100%,#2f2e33));
-	background: -webkit-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
-	background: -o-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
-	background: -ms-linear-gradient(top,  #414045 55%,#2f2e33 100%); 
-	background: linear-gradient(to bottom,  #414045 55%,#2f2e33 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414045', endColorstr='#2f2e33',GradientType=0 );
-	box-shadow: inset 0px 1px 8px #222;
+	/*position:relative;*/
+	background-color: #4a90e2;
 }
 .section {
 	clear: both;
@@ -733,18 +747,18 @@ p.note{
 	display: block;
 	float:left;
 	margin: 0% 0 1% 1.6%;
-	border-right: 2px groove #555;
+	border-right: 1px groove white;
 }
 .col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 .col_1_of_4:last-child {
 	border:none;
 }
 .span_1_of_4 {
-	width: 20.5%;
+	width: 30%;
 	padding:1.5%; 
 }
 .span_1_of_4  h4 {
-	color:#ccc;
+	color:white;
 	margin-bottom: .5em;
 	font-size:1.2em;
 	line-height: 1.2;
@@ -753,23 +767,24 @@ p.note{
 	margin-top: 0px;
 	letter-spacing: -1px;
 	text-transform:uppercase;
-	border-bottom:1px solid #474747;
+	/*border-bottom:1px solid #ff696e;*/
 	padding-bottom:0.5em;
 }
 .span_1_of_4  li a{
 	font-size:0.8125em;
 	padding:0.4em 0;
-	color:#979797;
+	color:white;
 	font-family :Arial, Helvetica, sans-serif;
-	display:block;	 	 
+	display:block;	
+	text-decoration: none; 	 
 }
 .span_1_of_4  li a:hover,.span_1_of_4  li span:hover{
-	color:#BBB7B7;
+	color:#ff696e;
 }
 .span_1_of_4  li span{
 	font-size:1.2em;
 	padding:0.2em 0;
-	color:#979797;
+	color:white;
 	display:block;
 	cursor:pointer;
 }
@@ -1470,7 +1485,7 @@ table.tblone img {
 .contact-form input[type="text"],.contact-form textarea{
 		    padding:8px;
 			display:block;
-			width:98%;
+			width:40%;
 			background:#fcfcfc;
 			border: none;
 			outline:none;
@@ -1486,18 +1501,6 @@ table.tblone img {
 .contact-form textarea{
 		resize:none;
 		height:120px;		
-}
-.contact-form input[type="submit"]{
-	padding:7px 25px;
-	cursor:pointer;
-	background:#FFF url(../images/large-button-overlay.png);
-    font-family:Arial, Helvetica, sans-serif;
-    position:absolute;
-    right:0;
-    border: 1px solid #ccc;
-	color: #555 !important;
-	font-size:1em;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 .contact-form input[type="submit"]:hover{
 	background-color: #EEE;

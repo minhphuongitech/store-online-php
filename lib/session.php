@@ -31,20 +31,23 @@ class Session{
     self::init();
     if (self::get("adminlogin")== false) {
      self::destroy();
-     header("Location:login.php");
+     // header("Location:login.php");
+     echo "<script> location.replace('login.php'); </script>";
     }
  }
 
  public static function checkLogin(){
     self::init();
     if (self::get("adminlogin")== true) {
-     header("Location:index.php");
+     // header("Location:index.php");
+     echo "<script> location.replace('index.php'); </script>";
     }
  }
 
  public static function destroy(){
   session_destroy();
-  header("Location:login.php");
+  // header("Location:login.php");
+  echo "<script> location.replace('login.php'); </script>";
  }
 }
 ?>

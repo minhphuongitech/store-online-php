@@ -15,6 +15,7 @@
 		echo "<script>window.location = '404.php'</script>";
 	}
 ?>
+<link rel="stylesheet" type="text/css" href="template_pvs/css_pvs/products_list_pvs.css">
  <div class="main">
     <div class="content">
     	<div class="content_top">
@@ -25,34 +26,43 @@
     			}
     		?></h3>
     		</div>
-    		<div class="clear"></div>
-    	</div>
-	      <div class="section group">
-	      	<?php 
+    		<div class="clear">
+    			
+    			<div class="slider-box-row">
+	    	<?php 
 	      		if($prodList) {
 	      			while ($result = $prodList->fetch_assoc()) {
 	      	?>
-				<div class="grid_1_of_4 images_1_of_4">
-					 <a href="details.php?productid=<?php echo $result['productId']?>"><img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /></a>
-					 <h2><?php echo $result['productName']?></h2>
-					 <p><?php echo $fm->textShorten($result['product_desc'])?></p>
-					 <p><span class="price"><?php echo $result['price']?></span></p>
-				     <div class="button"><span><a href="details.php?productid=<?php echo $result['productId']?>" class="details">Details</a></span></div>
+	    	<div class="slider-box-column">
+					<!-- <p class="time">New</p> -->
+					<div class="img-box">
+						<img src="admin/uploads/<?php echo $result['image'] ?>" alt="no image">
+					</div>
+					<p class="detail"><?php echo $result['productName'] ?>
+						<a href="#" class="price"><?php echo Format::formatNumberAsCurrency($result['price']);
+					  ?> Yen</a>
+					</p>
+					<div class="cart">
+						<a href="details.php?productid=<?php echo $result['productId'] ?>">Details</a>
+					</div>
 				</div>
 			<?php 
-					}
+						}
 	      		} else {
 	      			echo "<br><span style='font-size:20px; color:red;'>All products sold out.</span>";
 	      		}
-			?>
+				?>
 			</div>
+    		</div>
 
-	
-	
-    </div>
- </div>
-
- <?php
+    		</div>
+    	</div>
+    	<?php
 	include 'inc/footer.php';
 ?>
+    </div>
+
+ </div>
+
+ 
 

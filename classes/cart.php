@@ -44,9 +44,11 @@
 							VALUES('{$result['productId']}','$sId','{$result['productName']}','{$result['price']}','$quantity','{$result['image']}')";
 				$insertResult = $this->db->insert($insertQuery);
 				if($insertResult) {
-					header('Location:cart.php');
+					// header('Location:cart.php');
+					echo "<script> location.replace('cart.php'); </script>";
 				} else {
-					header('Location:404.php');
+					// header('Location:404.php');
+					echo "<script> location.replace('404.php'); </script>";
 				}	
 			}
 		}
@@ -80,7 +82,8 @@
 			$query = "DELETE FROM tbl_cart WHERE cartId = $cartId";
 			$result = $this->db->delete($query);
 			if($result == true) {
-				header('Location: cart.php');
+				// header('Location: cart.php');
+				echo "<script> location.replace('cart.php'); </script>";
 			} else {
 				$alert = "<span class='error'>Delete product cart NOT successfully.</span>";
 			}
@@ -122,12 +125,15 @@
 				}
 				if($i > 0) {
 					$this->deleteAllCartBySessionId();
-					header('Location: ordersuccess.php');
+					// header('Location: ordersuccess.php');
+					echo "<script> location.replace('ordersuccess.php'); </script>";
 				} else {
-					header('Location: orderfail.php');
+					// header('Location: orderfail.php');
+					echo "<script> location.replace('orderfail.php'); </script>";
 				}	
 			} else {
-				header('Location: orderfail.php');
+				// header('Location: orderfail.php');
+				echo "<script> location.replace('orderfail.php'); </script>";
 			}
 		}
 

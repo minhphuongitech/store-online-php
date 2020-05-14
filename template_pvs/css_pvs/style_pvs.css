@@ -1,0 +1,109 @@
+.wrap_pvs {
+	width: 80%;
+	margin: auto;
+	background-color: white;
+}
+
+.header_top_pvs{
+	padding:0px;
+	background-color: rgb(243, 243, 243);;
+}
+.logo_pvs{
+	float:left;
+}
+
+.header_top_right_pvs{
+	float:left;
+	margin-left: 10px;
+	width:80%;
+	margin-top:35px;
+}
+
+.login_pvs {
+	margin-left: 10px;
+	margin-top: 6px;
+	border-radius: 1%;
+	width: 95px;
+	height: 30px;
+	float: left;
+	background-color: #ff696e;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.login_pvs:hover {
+	background-color: #fd7e14;
+}
+
+.login_pvs a {
+	float: left;
+	text-decoration: none;
+	color: white;
+	width: 100%;
+	margin-top: 2px;
+}
+
+.search_box_pvs {
+	float:left;
+	/*border: 1px solid #DBDBDB;*/
+	position:relative;
+	width:60%;
+	padding: 5px;
+	text-align: center;
+}
+
+.search_box_pvs input[type="text"] {
+	width: 85%;
+}
+
+.search_box_pvs input[type="submit"] {
+	width: 60px;
+	height: 30px;
+	background-color: #602D8D;
+	color: white;
+	border: none;
+	border-radius: 3px;
+}
+
+.cart_box_pvs {
+	float: left;
+	border: 1px solid #CECECE;
+	width: 200px;
+	height: 42px;
+	margin-left: 5px;
+	padding: 4px;
+}
+
+.cart_box_pvs a {
+	color: inherit;
+}
+
+.register_button {
+		cursor: pointer;
+		background: #ff696e;
+	    border-radius: 4px;
+	    border: solid 1px #ff696e;
+	    color: white;
+	    padding: 10px 15px 10px 15px;}
+	    .register_button:hover {
+	    	background: #fd7e14;
+	    }
+
+.contact-form-pvs span label{
+	width: 100px;
+	float: left;
+}
+
+.contact-form-pvs span input[type="text"]{
+	width: 70%;
+}
+
+.contact-form-pvs span textarea{
+	width: 70%;
+	height: 100px;
+}
+
+.contact-form-pvs form{
+	width: 50%;
+	float: left;
+}

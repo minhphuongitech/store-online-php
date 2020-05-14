@@ -19,7 +19,7 @@
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Cập nhật sản phẩm</h2>
+        <h2>Update Product</h2>
         <div class="block">  
         <?php if(isset($updateProduct)) {
                 echo $updateProduct;

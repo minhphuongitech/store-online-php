@@ -16,8 +16,8 @@
 					</div>
 				    <div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
-						<p><?php echo $fm->textShorten($result['product_desc'], 50)?></p>
-						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Add to cart</a></span></div>
+						<p><?php echo $fm->textShorten($result['productName'], 15)?></p>
+						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>"><?= _DETAILS?></a></span></div>
 				   </div>
 			   </div>
 			   <?php 
@@ -35,8 +35,8 @@
 					</div>
 					<div class="text list_2_of_1">
 						  <h2><?php echo $result['brandName']?></h2>
-						<p><?php echo $fm->textShorten($result['product_desc'], 50)?></p>
-						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Add to cart</a></span></div>
+						<p><?php echo $fm->textShorten($result['productName'], 15)?></p>
+						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Details</a></span></div>
 					</div>
 				</div>
 				<?php 
@@ -56,8 +56,8 @@
 					</div>
 				    <div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
-						<p><?php echo $fm->textShorten($result['product_desc'], 50)?></p>
-						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Add to cart</a></span></div>
+						<p><?php echo $fm->textShorten($result['productName'], 15)?></p>
+						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Details</a></span></div>
 				   </div>
 			   </div>	
 			   <?php 
@@ -75,8 +75,8 @@
 					</div>
 					<div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
-						<p><?php echo $fm->textShorten($result['product_desc'], 50)?></p>
-						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Add to cart</a></span></div>
+						<p><?php echo $fm->textShorten($result['productName'], 15)?></p>
+						<div class="button"><span><a href="details.php?productid=<?php echo $result['productId'] ?>">Details</a></span></div>
 					</div>
 				</div>
 				<?php 

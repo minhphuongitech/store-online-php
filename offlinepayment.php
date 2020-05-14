@@ -21,6 +21,13 @@
 ?>
 
  <style type="text/css">
+ 	a.register_button {
+        text-decoration: none;
+        color: white;
+    }
+ 	.content_top {
+ 		height: 430px
+ 	}
  	.box_left {
  		border: 1px solid;
     	width: 50%;
@@ -31,42 +38,6 @@
     	width: 48%;
     	float: right;
  	}
- 	.atag a,.search a.grey{
-	    padding:10px 15px;
-	    font-size:15px;
-	    font-weight:bold;
-	    color             : #fff;
-	    -webkit-box-shadow: 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
-        -moz-box-shadow   : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
-        box-shadow        : 0 1px rgba(255,255,255,0.2) inset, 0 2px 2px -1px rgba(0,0,0,0.3);
-        -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;  
-        cursor:pointer;   
-	}
-
-	 a.grey,.search a.grey{
-		 	border            : 1px solid #303030;
-	        background        : #3f4040;
-	        background        : -moz-linear-gradient(top,  #3f4040 0%, #303131 100%);
-	        background        : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f4040), color-stop(100%,#303131));
-	        background        : -webkit-linear-gradient(top,  #3f4040 0%,#303131 100%);
-	        background        : -o-linear-gradient(top,  #3f4040 0%,#303131 100%);
-	        background        : -ms-linear-gradient(top,  #3f4040 0%,#303131 100%);
-	        background        : linear-gradient(top,  #3f4040 0%,#303131 100%);
-	        filter            : progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4040', endColorstr='#303131',GradientType=0 );
-	        text-shadow       : 0 1px 0 rgba(0, 0, 0, 0.4);
-	}
-	 a.grey:hover,.search a.grey:hover{
-		        border            : 1px solid #303030;
-	        background        : #525252;
-	        background        : -moz-linear-gradient(top,  #525252 0%, #454646 100%);
-	        background        : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#525252), color-stop(100%,#454646));
-	        background        : -webkit-linear-gradient(top,  #525252 0%,#454646 100%);
-	        background        : -o-linear-gradient(top,  #525252 0%,#454646 100%);
-	        background        : -ms-linear-gradient(top,  #525252 0%,#454646 100%);
-	        background        : linear-gradient(top,  #525252 0%,#454646 100%);
-	        filter            : progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#454646',GradientType=0 );
-	        text-shadow       : 0 1px 0 rgba(0, 0, 0, 0.4);  
-	}
 
 	span.error {
 		color: red;
@@ -97,21 +68,21 @@
     	<div class="section group">
     		<div class="content_top">
 	    		<div class="heading">
-	    			<h3>Offline payment method</h3>
+	    			<h3><?=_OFFLINE_PAYMENT_METHOD?></h3>
 
 	    		</div>
     		<div class="clear"></div>
     		<div class="box_left">
 		    			<div class="cartpage">
-			    	<h2 style="font-size: 22px;">Your Cart</h2>
+			    	<h2 style="font-size: 22px;"><?= _CART?></h2>
 						<table class="tblone">
 							<tr>
-								<th style="font-size: 16px" width="5%">No.</th>
-								<th style="font-size: 16px" width="35%">Product Name</th>
-								<th style="font-size: 16px" width="10%">Image</th>
-								<th style="font-size: 16px" width="20%">Price</th>
-								<th style="font-size: 16px" width="5%">Quantity</th>
-								<th style="font-size: 16px" width="25%">Total Price</th>
+								<th style="font-size: 16px" width="5%"><?= _NO?></th>
+								<th style="font-size: 16px" width="35%"><?= _PRODUCT_NAME?></th>
+								<th style="font-size: 16px" width="10%"><?= _IMAGE?></th>
+								<th style="font-size: 16px" width="20%"><?= _PRICE?></th>
+								<th style="font-size: 16px" width="5%"><?= _QUANTITY?></th>
+								<th style="font-size: 16px" width="25%"><?= _TOTAL_PRICE?></th>
 							</tr>
 							<?php 
 								$ct = new cart();
@@ -181,38 +152,38 @@
     				?>
 		    		<table class="tblone">
 		    			<tr>
-		    				<td>Name</td>
+		    				<td><?= _NAME?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['name']?></td>
 		    			</tr>
 		    			<tr>
-		    				<td>City</td>
+		    				<td><?= _CITY?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['city']?></td>
 		    			</tr>
 		    			<tr>
-		    				<td>Address</td>
+		    				<td><?= _ADDRESS?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['address']?></td>
 		    			</tr>
 		    			<tr>
-		    				<td>Phone</td>
+		    				<td><?= _PHONE?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['phone']?></td>
 		    			</tr>
 		    			<tr>
-		    				<td>Zip code</td>
+		    				<td><?= _ZIPCODE?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['zipcode']?></td>
 		    			</tr>
 		    			<tr>
-		    				<td>Email</td>
+		    				<td><?= _EMAIL?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['email']?></td>
 		    			</tr>
 		    		</table>
 		    		<br>
-		    		<div align="right" class="atag" style="margin-right: 10px;"><a class="grey" href="editprofile.php">Update</a></div>
+		    		<div align="right" class="atag" style="margin-right: 10px;"><a class="register_button" href="editprofile.php"><?= _UPDATE?></a></div>
 		    		<br>
 		    		<?php 
 		    				}
@@ -225,7 +196,7 @@
  		</div>
  		<br><br>
  		<div align="center">
- 			<input class="submit_order" type="submit" name="submit" value="ORDER NOW" />
+ 			<input class="submit_order" type="submit" name="submit" value="<?=_ORDER_NOW?>" />
  		<div>
 	</div>	
  	</div>

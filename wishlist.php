@@ -88,7 +88,7 @@
     	<div class="section group">
     		<div class="content_top">
 	    		<div class="heading">
-	    			<h3>Your wishlist</h3>
+	    			<h3><?= _YOUR_WISHLIST?></h3>
 	    			<?php 
 	    				if(isset($deleteWishlist)) {
 	    					echo $deleteWishlist;
@@ -98,14 +98,14 @@
     		<div class="clear"></div>
     		<div class="box_left">
 		    			<div class="cartpage">
-			    	<h2 style="font-size: 22px;">Products list</h2>
+			    	<h2 style="font-size: 22px;"><?= _PRODUCTS_LIST?></h2>
 						<table class="tblone">
 							<tr>
-								<th style="font-size: 16px" width="5%">No.</th>
-								<th style="font-size: 16px" width="30%">Product Name</th>
-								<th style="font-size: 16px" width="15%">Image</th>
-								<th style="font-size: 16px" width="25%">Price</th>
-								<th style="font-size: 16px" width="25%">Action</th>
+								<th style="font-size: 16px" width="5%"><?= _NO?></th>
+								<th style="font-size: 16px" width="30%"><?= _PRODUCT_NAME?></th>
+								<th style="font-size: 16px" width="15%"><?= _IMAGE?></th>
+								<th style="font-size: 16px" width="25%"><?= _PRICE?></th>
+								<th style="font-size: 16px" width="25%"><?= _ACTION?></th>
 							</tr>
 							<?php 
 								if($wishlist) {
@@ -118,7 +118,7 @@
 								<td><?php echo $result['productName'] ?></td>
 								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
 								<td><?php echo $result['price']; ?></td>
-								<td><a onclick="return confirm('Do you really want to delete?')" href="?delid=<?php echo $result['productId'] ?>"> Remove </a> || <a href="details.php?productid=<?php echo $result['productId'] ?>"> View </a></td>
+								<td><a onclick="return confirm('Do you really want to delete?')" href="?delid=<?php echo $result['productId'] ?>"> <?=_REMOVE?> </a> || <a href="details.php?productid=<?php echo $result['productId'] ?>"> <?=_VIEW?> </a></td>
 							</tr>
 							<?php 
 									}

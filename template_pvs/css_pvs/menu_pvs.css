@@ -1,0 +1,45 @@
+.menu_container {
+	color: white;
+	background-color: #4a90e2;
+	float: left;
+	width: 100%;
+}
+
+.menu_container ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu_container ul li {
+	float: left;
+	width: 120px;
+	height: 40px;
+	background-color: #4a90e2;
+	text-align: center;
+	opacity: .99;
+	line-height: 40px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.menu_container ul li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.menu_container ul li a:hover {
+	background-color: #ff696e;
+	display: block;
+}
+
+.menu_container ul li ul li {
+	display: none;
+	width: 200px;
+	border-top: solid 1px white;
+	text-align: left;
+}
+
+.menu_container ul li:hover ul li{
+	display: block;
+}

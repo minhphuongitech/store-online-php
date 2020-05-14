@@ -81,23 +81,23 @@
     	<div class="section group">
     		<div class="content_top">
 	    		<div class="heading">
-	    			<h3>Your details ordered</h3>
+	    			<h3><?=_YOUR_DETAILS_ORDERED ?></h3>
 
 	    		</div>
     		<div class="clear"></div>
     		<div class="box_left">
 		    			<div class="cartpage">
-			    	<h2 style="font-size: 22px;">Details</h2>
+			    	<h2 style="font-size: 22px;"><?= _DETAILS?></h2>
 						<table class="tblone">
 							<tr>
 								<th style="font-size: 16px" width="5%">No.</th>
-								<th style="font-size: 16px" width="25%">Product Name</th>
-								<th style="font-size: 16px" width="10%">Image</th>
-								<th style="font-size: 16px" width="15%">Price</th>
-								<th style="font-size: 16px" width="5%">Quantity</th>
-								<th style="font-size: 16px" width="20%">Total Price</th>
-								<th style="font-size: 16px" width="10%">Date</th>
-								<th style="font-size: 16px" width="10%">Status</th>
+								<th style="font-size: 16px" width="25%"><?= _PRODUCT_NAME?></th>
+								<th style="font-size: 16px" width="10%"><?= _IMAGE?></th>
+								<th style="font-size: 16px" width="15%"><?= _PRICE?>	</th>
+								<th style="font-size: 16px" width="5%"><?= _QUANTITY?></th>
+								<th style="font-size: 16px" width="20%"><?= _TOTAL_PRICE?></th>
+								<th style="font-size: 16px" width="10%"><?= _DATE?></th>
+								<th style="font-size: 16px" width="10%"><?= _STATUS?></th>
 							</tr>
 							<?php 
 								$prodOrder = $ct->getOrder();

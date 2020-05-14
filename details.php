@@ -35,6 +35,11 @@
 	span.success {
 		color: green;
 	}
+
+	input[type="button"].register_button{
+		width: 150px;
+		height: 50px;
+	}
  </style>
 <form action="" method="post">
  <div class="main">
@@ -58,14 +63,14 @@
 					<h2><?php echo $prodResult['productName']?></h2>
 					<p><?php echo $fm->textShorten($prodResult['product_desc'], 200);?></p>					
 					<div class="price">
-						<p>Price: <span><?php echo Format::formatNumberAsCurrency($prodResult['price'])?> đ</span></p>
-						<p>Category: <span><?php echo $prodResult['catName']?></span></p>
-						<p>Brand:<span><?php echo $prodResult['brandName']?></span></p>
+						<p><?= _PRICE?>: <span><?php echo Format::formatNumberAsCurrency($prodResult['price'])?> Yen</span></p>
+						<p><?= _CATEGORY?>: <span><?php echo $prodResult['catName']?></span></p>
+						<p><?= _BRAND?>:<span><?php echo $prodResult['brandName']?></span></p>
 					</div>
 				<div class="add-cart">
 					
 						<input type="number" class="buyfield" name="quantity" value="1" min="1" />
-						<input type="submit" class="buysubmit" name="submit" value="Buy Now"/><br>
+						<input type="submit" class="register_button" name="submit" value="<?= _ADD_TO_CART?>"/><br>
 						<?php 
 							if(isset($addCart)) {
 								echo "<span style='color:red; font-weight:200'>".$addCart."</span>";
@@ -74,25 +79,26 @@
 								
 				</div>
 				<div class="add-cart">
-					<?php if(Session::get('customer_id') != NULL) echo "<input type='submit' name='submit_wishlist' class='buysubmit' value='Save to Wishlist'>"?>
-					<?php if(Session::get('customer_id') != NULL) echo "<input type='submit' name='submit_compare' class='buysubmit' value='Compare Product'>"?>
+					<?php if(Session::get('customer_id') != NULL) echo "<input type='submit' name='submit_wishlist' class='register_button' value='"._SAVE_TO_WISHLIST."'>"?>
+					<?php if(Session::get('customer_id') != NULL) echo "<input type='submit' name='submit_compare' class='register_button' value='"._COMPARE_PRODUCT."'>"?>
 					<br><br><?php if(isset($addProductCompare)) echo $addProductCompare; ?>
 					<?php if(isset($addWishlist)) echo $addWishlist; ?>					
 				</div>
 
 			</div>
 			<div class="product-desc">
-			<h2>Product Details</h2>
+			<h2><?= _PRODUCT_DETAILS?></h2>
 			<p><?php echo $prodResult['product_desc'] ?></p>
 	    </div>
 	    <div class="product-desc">
 			<div class="row">
 				<div class="col-md-12">
-					<h5>Product comments</h5>
-					<p class="col-md-4"><input type="text" class="form-control" name="commentatorName" placeholder="Your name..."></p>
-					<p class="col-md-4"><input type="text" class="form-control" name="email" placeholder="Your email..."></p>
-					<p><textarea rows="5" style="resize: none" placeholder="Comment..." class="form-control" name="content"></textarea></p>
-					<p><input type="button" name="" value="Send comment" class="btn btn-success"></p>
+					<h5><?= _PRODUCT_COMMENTS?></h5>
+					<p class="col-md-4"><input type="text" class="form-control" name="commentatorName" placeholder="<?= _NAME?>..."></p>
+					<p class="col-md-4"><input type="text" class="form-control" name="email" placeholder="<?= _EMAIL?>..."></p>
+					<p><textarea rows="5" style="resize: none" placeholder="<?= _COMMENT?>..." class="form-control" name="content"></textarea></p>
+					<p>
+						<input class="register_button" type="button" name="" value="<?= _SEND?>" class="btn btn-success"></p>
 				</div>
 			</div>
 			
@@ -106,7 +112,7 @@
 				
 	</div>
 				<div class="rightsidebar span_3_of_1">
-					<h2>CATEGORIES</h2>
+					<h2><?= _CATEGORY?></h2>
 					<ul>
 						<?php 
 							$categoryList = $cat->show_category_site();
@@ -124,9 +130,10 @@
  				</div>
  		</div>
  	</div>
- </div>
- </form>	
  	<?php
 	include 'inc/footer.php';
 ?>
+ </div>
+ </form>	
+ 	
 

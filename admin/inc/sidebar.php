@@ -2,28 +2,33 @@
     <div class="box sidemenu">
         <div class="block" id="section-menu">
             <ul class="section menu">
-                <li><a class="menuitem">Danh mục sản phẩm</a>
+                <li><a class="menuitem">Suggestion Box</a>
                     <ul class="submenu">
-                        <li><a href="catadd.php">Thêm danh mục</a> </li>
-                        <li><a href="catlist.php">Danh mục sản phẩm</a> </li>
+                        <li><a href="contactlist.php">Email List</a></li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Thương hiệu sản phẩm</a>
+                <li><a class="menuitem">Category List</a>
                     <ul class="submenu">
-                        <li><a href="brandadd.php">Thêm thương hiệu</a> </li>
-                        <li><a href="brandlist.php">Danh thương hiệu</a> </li>
+                        <li><a href="catadd.php">Add New Category</a> </li>
+                        <li><a href="catlist.php">Category List</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Sản phẩm</a>
+                <li><a class="menuitem">Product Brand</a>
                     <ul class="submenu">
-                        <li><a href="productadd.php">Thêm sản phẩm</a> </li>
-                        <li><a href="productlist.php">Liệt kê sản phẩm</a> </li>
+                        <li><a href="brandadd.php">Add New Brand</a> </li>
+                        <li><a href="brandlist.php">Brand List</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Quản lý Slider</a>
+                <li><a class="menuitem">Product</a>
                     <ul class="submenu">
-                        <li><a href="slideradd.php">Thêm slider</a> </li>
-                        <li><a href="sliderlist.php">Liệt kê slider</a> </li>
+                        <li><a href="productadd.php">Add New Product</a> </li>
+                        <li><a href="productlist.php">Product List</a> </li>
+                    </ul>
+                </li>
+                <li><a class="menuitem">Slider Management</a>
+                    <ul class="submenu">
+                        <li><a href="slideradd.php">Add New Slider</a> </li>
+                        <li><a href="sliderlist.php">Slider List</a> </li>
                     </ul>
                 </li>
                <li><a class="menuitem">Site Option</a>

@@ -55,12 +55,13 @@ public function insert($query){
   
 // Update data
  public function update($query){
+   $update_row = 0;
    $update_row = $this->link->query($query) or 
      die($this->link->error.__LINE__);
    if($update_row){
     return $update_row;
    } else {
-    return false;
+    return $update_row;
     }
  }
   
