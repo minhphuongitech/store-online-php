@@ -17,97 +17,101 @@ Class Database{
    public $link;
    public $error;
  
- public function __construct(){
-  $this->connectDB();
+ //MySQL connect---------------------------
+ private function connectDB(){
+   $this->link = new mysqli($this->host, $this->user, $this->pass, 
+    $this->dbname);
+   mysqli_set_charset($this->link,"utf8");
+   if(!$this->link){
+     $this->error ="Connection fail".$this->link->connect_error;
+    return false;
+   }
  }
  
-//PosgreeSQL connect
-private function connectDB(){
-  $connStr = "host=$this->host port=5432 dbname=$this->dbname user=$this->user password=$this->pass";
-  $conn = pg_connect($connStr) or die('Connection failed');
-  return $conn;
- }
-
- // Select or Read data
+// Select or Read data
 public function select($query){
-  $result = pg_query($conn, $query);
-  if($result){
+  $result = $this->link->query($query) or 
+   die($this->link->error.__LINE__);
+  if($result->num_rows > 0){
     return $result;
   } else {
     return false;
   }
  }
-
- // Insert data
+ 
+// Insert data
 public function insert($query){
-  return $this->select($query);
-}
-
-
+   $insert_row = $this->link->query($query) or 
+     die($this->link->error.__LINE__);
+   if($insert_row){
+     return $insert_row;
+   } else {
+     return false;
+    }
+ }
+  
 // Update data
  public function update($query){
-   return $this->select($query);
+   $update_row = 0;
+   $update_row = $this->link->query($query) or 
+     die($this->link->error.__LINE__);
+   if($update_row){
+    return $update_row;
+   } else {
+    return $update_row;
+    }
  }
   
 // Delete data
  public function delete($query){
-  return $this->select($query);
- }
+   $delete_row = $this->link->query($query) or 
+     die($this->link->error.__LINE__);
+   if($delete_row){
+     return $delete_row;
+   } else {
+     return false;
+    }
+   }
+//MySQL connect---------------------------
 
- // //MySQL connect---------------------------
- // private function connectDB(){
- //   $this->link = new mysqli($this->host, $this->user, $this->pass, 
- //    $this->dbname);
- //   mysqli_set_charset($this->link,"utf8");
- //   if(!$this->link){
- //     $this->error ="Connection fail".$this->link->connect_error;
- //    return false;
- //   }
- // }
+
+// //PosgreeSQL connect---------------------------
+//  public function __construct(){
+//   $this->connectDB();
+//  }
  
-// // Select or Read data
+// //PosgreeSQL connect
+// private function connectDB(){
+//   $connStr = "host=$this->host port=5432 dbname=$this->dbname user=$this->user password=$this->pass";
+//   $conn = pg_connect($connStr) or die('Connection failed');
+//   return $conn;
+//  }
+
+//  // Select or Read data
 // public function select($query){
-//   $result = $this->link->query($query) or 
-//    die($this->link->error.__LINE__);
-//   if($result->num_rows > 0){
+//   $result = pg_query($conn, $query);
+//   if($result){
 //     return $result;
 //   } else {
 //     return false;
 //   }
 //  }
- 
-// // Insert data
+
+//  // Insert data
 // public function insert($query){
-//    $insert_row = $this->link->query($query) or 
-//      die($this->link->error.__LINE__);
-//    if($insert_row){
-//      return $insert_row;
-//    } else {
-//      return false;
-//     }
-//  }
-  
+//   return $this->select($query);
+// }
+
+
 // // Update data
 //  public function update($query){
-//    $update_row = 0;
-//    $update_row = $this->link->query($query) or 
-//      die($this->link->error.__LINE__);
-//    if($update_row){
-//     return $update_row;
-//    } else {
-//     return $update_row;
-//     }
+//    return $this->select($query);
 //  }
   
 // // Delete data
 //  public function delete($query){
-//    $delete_row = $this->link->query($query) or 
-//      die($this->link->error.__LINE__);
-//    if($delete_row){
-//      return $delete_row;
-//    } else {
-//      return false;
-//     }
-//    }
-// //MySQL connect---------------------------
+//   return $this->select($query);
+//  }
+//  //PosgreeSQL connect---------------------------
+
 }
