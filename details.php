@@ -118,8 +118,24 @@
 							$categoryList = $cat->show_category_site();
 							if($categoryList) {
 								while ($result = $categoryList->fetch_assoc()) {
+									$myValue = '';
+									$lang = $_SESSION['lang'];
+									switch ($lang) {
+										case 'english':
+											$myValue = $result['catName'];
+											break;
+										case 'japanese':
+											$myValue = $result['catNameJp'];
+											break;
+										case 'vietnamese':
+											$myValue = $result['catNameVn'];
+											break;
+										default:
+											$myValue = $result['catNameJp'];
+											break;
+									}
 						?>
-						<li><a href="productbycat.php?catid=<?php echo $result['catId'] ?>"><?php echo $result['catName'] ?></a></li>
+						<li><a href="productbycat.php?catid=<?php echo $result['catId'] ?>"><?php echo $myValue?></a></li>
 						<?php
 								}
 							}
