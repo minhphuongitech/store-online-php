@@ -57,7 +57,9 @@
     			?>
 				<div class="cont-desc span_1_of_2">				
 					<div class="grid images_3_of_2">
-						<img  src="admin/uploads/<?php echo $prodResult['image']?>" alt="" />
+						<!-- <img  src="admin/uploads/<?php echo $prodResult['image']?>" alt="" /> -->
+						<?php $myImage = base64_encode($prodResult['convertedImage']);?>
+						<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
 					</div>
 				<div class="desc span_3_of_2">
 					<h2><?php echo $prodResult['productName']?></h2>

@@ -42,7 +42,11 @@
 					<td><?php echo $result['productId']?></td>
 					<td><?php echo $result['productName']?></td>
 					<td><?php echo $result['price']?></td>
-					<td><img alt="no img" width="50px" height="60px" src="uploads/<?php echo $result['image']?>"></td>
+					<td>
+						<!-- <img alt="no img" width="50px" height="60px" src="uploads/<?php echo $result['image']?>"> -->
+						<?php $myImage = base64_encode($result['convertedImage']);?>
+						<img alt="no img" width="50px" height="60px" src="data:image/jpeg;base64,<?php echo $myImage?>" />
+					</td>
 					<td><?php echo $result['catName']?></td>
 					<td><?php echo $result['brandName']?></td>
 					<td><?php 

@@ -33,7 +33,9 @@
 	    	<div class="slider-box-column">
 					<!-- <p class="time">New</p> -->
 					<div class="img-box">
-						<img src="admin/uploads/<?php echo $featuredProdResult['image'] ?>" alt="no image">
+						<!-- <img src="admin/uploads/<?php echo $featuredProdResult['image'] ?>" alt="no image"> -->
+						<?php $myImage = base64_encode($featuredProdResult['convertedImage']);?>
+						<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
 					</div>
 					<p class="detail"><?php echo $featuredProdResult['productName'] ?>
 						<a href="#" class="price"><?php echo Format::formatNumberAsCurrency($featuredProdResult['price']);
@@ -83,7 +85,9 @@
 	    	<div class="slider-box-column">
 					<p class="time">New</p>
 					<div class="img-box">
-						<img src="admin/uploads/<?php echo $newProdResult['image'] ?>" alt="no image">
+						<!-- <img src="admin/uploads/<?php echo $newProdResult['image'] ?>" alt="no image"> -->
+						<?php $myImage = base64_encode($newProdResult['convertedImage']);?>
+						<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
 					</div>
 					<p class="detail"><?php echo $newProdResult['productName'] ?>
 						<a href="#" class="price"><?php echo Format::formatNumberAsCurrency($newProdResult['price']) ?> Yen</a>
@@ -113,7 +117,9 @@
 	    	<div class="slider-box-column">
 					<!-- <p class="time">New</p> -->
 					<div class="img-box">
-						<img src="admin/uploads/<?php echo $prodPagingResult['image'] ?>" alt="no image">
+						<!-- <img src="admin/uploads/<?php echo $prodPagingResult['image'] ?>" alt="no image"> -->
+						<?php $myImage = base64_encode($prodPagingResult['convertedImage']);?>
+						<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
 					</div>
 					<p class="detail"><?php echo $prodPagingResult['productName'] ?>
 						<a href="#" class="price"><?php echo Format::formatNumberAsCurrency($prodPagingResult['price']) ?> Yen</a>

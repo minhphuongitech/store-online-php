@@ -12,7 +12,11 @@
 				?>
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						 <a href="details.php?productid=<?php echo $result['productId'] ?>"> <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /></a>
+						 <a href="details.php?productid=<?php echo $result['productId'] ?>"> 
+						 	<!-- <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /> -->
+						 	<?php $myImage = base64_encode($result['convertedImage']);?>
+						<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
+						 </a>
 					</div>
 				    <div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
@@ -31,7 +35,11 @@
 				?>			
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						  <a href="details.php?productid=<?php echo $result['productId'] ?>"> <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /></a>
+						  <a href="details.php?productid=<?php echo $result['productId'] ?>"> 
+						  	<!-- <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /> -->
+						  	<?php $myImage = base64_encode($result['convertedImage']);?>
+							<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
+						  </a>
 					</div>
 					<div class="text list_2_of_1">
 						  <h2><?php echo $result['brandName']?></h2>
@@ -52,7 +60,11 @@
 				?>
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						 <a href="details.php?productid=<?php echo $result['productId'] ?>"> <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /></a>
+						 <a href="details.php?productid=<?php echo $result['productId'] ?>"> 
+						 	<!-- <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /> -->
+						 	<?php $myImage = base64_encode($result['convertedImage']);?>
+							<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
+						 </a>
 					</div>
 				    <div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
@@ -71,7 +83,11 @@
 				?>		
 				<div class="listview_1_of_2 images_1_of_2">
 					<div class="listimg listimg_2_of_1">
-						  <a href="details.php?productid=<?php echo $result['productId'] ?>"> <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /></a>
+						  <a href="details.php?productid=<?php echo $result['productId'] ?>"> 
+						  	<!-- <img src="admin/uploads/<?php echo $result['image']?>" alt="no img" /> -->
+						  	<?php $myImage = base64_encode($result['convertedImage']);?>
+							<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
+						  </a>
 					</div>
 					<div class="text list_2_of_1">
 						<h2><?php echo $result['brandName']?></h2>
@@ -97,7 +113,11 @@
 							if($activeSlider) {
 								while ($sliderResult = $activeSlider->fetch_assoc()) {
 						?>
-						<li><img src="admin/uploads/<?php echo $sliderResult['sliderImage'] ?>" alt="no img"/></li>
+						<li>
+							<!-- <img src="admin/uploads/<?php echo $sliderResult['sliderImage'] ?>" alt="no img"/> -->
+							<?php $myImage = base64_encode($sliderResult['convertedSliderImage']);?>
+							<img src="data:image/jpeg;base64,<?php echo $myImage?>" />
+						</li>
 						<?php 
 								}
 							}

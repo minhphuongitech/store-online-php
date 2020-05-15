@@ -25,6 +25,53 @@
 			$this->fm = new Format();
 		}
 
+		// public function insert_product($data, $files) {
+			
+		// 	$productName = mysqli_real_escape_string($this->db->link, $data['productName']);
+		// 	$category = mysqli_real_escape_string($this->db->link, $data['category']);
+		// 	$brand = mysqli_real_escape_string($this->db->link, $data['brand']);
+		// 	$product_desc = mysqli_real_escape_string($this->db->link, $data['product_desc']);
+		// 	$price = mysqli_real_escape_string($this->db->link, $data['price']);
+		// 	$type = mysqli_real_escape_string($this->db->link, $data['type']);
+
+		// 	//Kiem tra hinh anh va lay hinh anh cho vao folder uploads
+		// 	$permited = array('jpg','jpeg','png','gif');
+		// 	$file_name = $_FILES['image']['name'];
+		// 	$file_size = $_FILES['image']['size'];
+		// 	$file_temp = $_FILES['image']['tmp_name'];
+
+		// 	$div = explode('.', $file_name);
+		// 	$file_ext = strtolower(end($div));
+		// 	$unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+		// 	$uploaded_image = "uploads/".$unique_image;
+
+		// 	if($productName == "" || $category == ""  || $brand == ""  
+		// 		|| $product_desc == "" || $price == ""  || $type == "" || $file_name == "") {
+		// 		$alert = "<span class='error'>Fields must be not empty!</span>";
+		// 		return $alert;
+		// 	} else {
+		// 		if($file_size > 2097152) {// file size > 2MB
+		// 			$alert = "<span class='error'>Image size must be less than 2Mb!</span>";
+		// 			return $alert;
+		// 		} elseif(in_array($file_ext, $permited) === false) {// === so sanh kieu, ham in_array cung tra ra false
+		// 			$alert = "<span class='error'>You can only upload:".implode(', ', $permited)."!</span>";
+		// 			return $alert;
+		// 		}
+		// 		move_uploaded_file($file_temp, $uploaded_image);
+		// 		$query = "INSERT INTO tbl_product(productName, catId, brandId, product_desc, price, type, image) 
+		// 					VALUES('$productName','$category','$brand','$product_desc','$price','$type','$unique_image')";
+		// 		$result = $this->db->insert($query);
+		// 		if($result == true) {
+		// 			$alert = "<span class='success'>Insert product successfully</span>";
+		// 			return $alert;
+		// 		} else {
+		// 			$alert = "<span class='error'>Insert product NOT successfully</span>";
+		// 			return $alert;
+		// 		}
+		// 	}
+
+		// }
+
 		public function insert_product($data, $files) {
 			
 			$productName = mysqli_real_escape_string($this->db->link, $data['productName']);
@@ -44,7 +91,6 @@
 			$file_ext = strtolower(end($div));
 			$unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
 			$uploaded_image = "uploads/".$unique_image;
-
 			if($productName == "" || $category == ""  || $brand == ""  
 				|| $product_desc == "" || $price == ""  || $type == "" || $file_name == "") {
 				$alert = "<span class='error'>Fields must be not empty!</span>";
@@ -58,8 +104,9 @@
 					return $alert;
 				}
 				move_uploaded_file($file_temp, $uploaded_image);
-				$query = "INSERT INTO tbl_product(productName, catId, brandId, product_desc, price, type, image) 
-							VALUES('$productName','$category','$brand','$product_desc','$price','$type','$unique_image')";
+				$convertedImg = addslashes(file_get_contents("../admin/".$uploaded_image));
+				$query = "INSERT INTO tbl_product(productName, catId, brandId, product_desc, price, type, image, convertedImage) 
+							VALUES('$productName','$category','$brand','$product_desc','$price','$type','$unique_image', '$convertedImg')";
 				$result = $this->db->insert($query);
 				if($result == true) {
 					$alert = "<span class='success'>Insert product successfully</span>";
@@ -100,8 +147,9 @@
 					return $alert;
 				}
 				move_uploaded_file($file_temp, $uploaded_image);
-				$query = "INSERT INTO tbl_slider(sliderName, sliderImage, status) 
-							VALUES('$title','$unique_image','$status')";
+				$convertedSliderImage = addslashes(file_get_contents("../admin/".$uploaded_image));
+				$query = "INSERT INTO tbl_slider(sliderName, sliderImage, status, convertedSliderImage) 
+							VALUES('$title','$unique_image','$status','$convertedSliderImage')";
 				$result = $this->db->insert($query);
 				if($result == true) {
 					$alert = "<span class='success'>Insert slider successfully</span>";
@@ -113,6 +161,71 @@
 			}
 
 		}
+
+		// public function update_product($data, $files, $productId) {
+			
+		// 	$productName = mysqli_real_escape_string($this->db->link, $data['productName']);
+		// 	$category = mysqli_real_escape_string($this->db->link, $data['category']);
+		// 	$brand = mysqli_real_escape_string($this->db->link, $data['brand']);
+		// 	$product_desc = mysqli_real_escape_string($this->db->link, $data['product_desc']);
+		// 	$price = mysqli_real_escape_string($this->db->link, $data['price']);
+		// 	$type = mysqli_real_escape_string($this->db->link, $data['type']);
+
+		// 	//Kiem tra hinh anh va lay hinh anh cho vao folder uploads
+		// 	$permited = array('jpg','jpeg','png','gif');
+		// 	$file_name = $_FILES['image']['name'];
+		// 	$file_size = $_FILES['image']['size'];
+		// 	$file_temp = $_FILES['image']['tmp_name'];
+
+		// 	$div = explode('.', $file_name);
+		// 	$file_ext = strtolower(end($div));
+		// 	$unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+		// 	$uploaded_image = "uploads/".$unique_image;
+
+		// 	if($productName == "" || $category == ""  || $brand == ""  
+		// 		|| $product_desc == "" || $price == ""  || $type == "") {
+		// 		$alert = "<span class='error'>Fields must be not empty!</span>";
+		// 		return $alert;
+		// 	} else {
+		// 		if(!empty($file_name)) {// upload new image
+		// 			if($file_size > 2097152) {// file size > 2MB
+		// 				$alert = "<span class='error'>Image size must be less than 2Mb!</span>";
+		// 				return $alert;
+		// 			} elseif(in_array($file_ext, $permited) === false) {//so sanh kieu, ham in_array cung tra ra false
+		// 				$alert = "<span class='error'>You can only upload:".implode(', ', $permited)."!</span>";
+		// 				return $alert;
+		// 			}
+		// 			$query = "UPDATE tbl_product 
+		// 						SET productName = '$productName', 
+		// 							catId = $category, 
+		// 							brandId = $brand, 
+		// 							product_desc = '$product_desc', 
+		// 							price = $price, 
+		// 							type = $type, 
+		// 							image = '$unique_image'
+		// 						WHERE productId = $productId";
+		// 		} else {
+		// 			$query = "UPDATE tbl_product 
+		// 					SET productName = '$productName', 
+		// 						catId = $category, 
+		// 						brandId = $brand, 
+		// 						product_desc = '$product_desc', 
+		// 						price = $price, 
+		// 						type = $type 
+		// 					WHERE productId = $productId";
+		// 		}
+		// 		move_uploaded_file($file_temp, $uploaded_image);
+		// 		$result = $this->db->update($query);
+		// 		if($result == true) {
+		// 			$alert = "<span class='success'>Update product successfully</span>";
+		// 			return $alert;
+		// 		} else {
+		// 			$alert = "<span class='error'>Update product NOT successfully</span>";
+		// 			return $alert;
+		// 		}
+		// 	}
+
+		// }
 
 		public function update_product($data, $files, $productId) {
 			
@@ -133,12 +246,12 @@
 			$file_ext = strtolower(end($div));
 			$unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
 			$uploaded_image = "uploads/".$unique_image;
-
 			if($productName == "" || $category == ""  || $brand == ""  
 				|| $product_desc == "" || $price == ""  || $type == "") {
 				$alert = "<span class='error'>Fields must be not empty!</span>";
 				return $alert;
 			} else {
+				move_uploaded_file($file_temp, $uploaded_image);
 				if(!empty($file_name)) {// upload new image
 					if($file_size > 2097152) {// file size > 2MB
 						$alert = "<span class='error'>Image size must be less than 2Mb!</span>";
@@ -147,6 +260,7 @@
 						$alert = "<span class='error'>You can only upload:".implode(', ', $permited)."!</span>";
 						return $alert;
 					}
+					$convertedImg = addslashes(file_get_contents("../admin/".$uploaded_image));
 					$query = "UPDATE tbl_product 
 								SET productName = '$productName', 
 									catId = $category, 
@@ -154,7 +268,8 @@
 									product_desc = '$product_desc', 
 									price = $price, 
 									type = $type, 
-									image = '$unique_image'
+									image = '$unique_image',
+									convertedImage = '$convertedImg'
 								WHERE productId = $productId";
 				} else {
 					$query = "UPDATE tbl_product 
@@ -166,7 +281,7 @@
 								type = $type 
 							WHERE productId = $productId";
 				}
-				move_uploaded_file($file_temp, $uploaded_image);
+				
 				$result = $this->db->update($query);
 				if($result == true) {
 					$alert = "<span class='success'>Update product successfully</span>";

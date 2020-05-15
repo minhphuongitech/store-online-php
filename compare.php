@@ -103,7 +103,7 @@
 							<tr>
 								<th style="font-size: 16px" width="5%"><?= _NO?></th>
 								<th style="font-size: 16px" width="30%"><?= _PRODUCT_NAME?></th>
-								<th style="font-size: 16px" width="15%"><?= _IMAGE?></th>
+								<!-- <th style="font-size: 16px" width="15%"><?= _IMAGE?></th> -->
 								<th style="font-size: 16px" width="25%"><?= _PRICE?></th>
 								<th style="font-size: 16px" width="25%"><?= _ACTION?></th>
 							</tr>
@@ -116,7 +116,7 @@
 							<tr>
 								<td><?php echo $i ?></td>
 								<td><?php echo $result['productName'] ?></td>
-								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
+								<!-- <td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td> -->
 								<td><?php echo $result['price']; ?></td>
 								<td><a onclick="return confirm('Do you really want to delete?')" href="?delid=<?php echo $result['productId'] ?>"> <?=_REMOVE?> </a> || <a href="details.php?productid=<?php echo $result['productId'] ?>"> <?=_VIEW?> </a></td>
 							</tr>
