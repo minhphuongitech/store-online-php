@@ -107,7 +107,10 @@
                         <label>Upload Image</label>
                     </td>
                     <td>
-                        <img width="60px" height="50px" src="uploads/<?php echo $prodResult['image']?>"><br>
+                        <!-- <img width="60px" height="50px" src="uploads/<?php echo $prodResult['image']?>"> -->
+                        <?php $myImage = base64_encode($prodResult['convertedImage']);?>
+                        <img width="60px" height="50px" src="data:image/jpeg;base64,<?php echo $myImage?>" />
+                        <br>
                         <input type="file" name="image" />
                     </td>
                 </tr>
