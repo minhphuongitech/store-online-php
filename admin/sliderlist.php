@@ -40,7 +40,11 @@
 				<tr class="odd gradeX">
 					<td><?php echo $i?></td>
 					<td><?php echo $result['sliderName']?></td>
-					<td><img alt="no img" src="uploads/<?php echo $result['sliderImage']?>" height="100px" width="200px"/></td>				
+					<td>
+						<!-- <img alt="no img" src="uploads/<?php echo $result['sliderImage']?>" height="100px" width="200px"/> -->
+						<?php $myImage = base64_encode($result['convertedSliderImage']);?>
+                        <img width="200px" height="100px" src="data:image/jpeg;base64,<?php echo $myImage?>" />
+					</td>				
 					<td>
 						<form action="" method="POST">
 							<select name="status">
