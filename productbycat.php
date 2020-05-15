@@ -20,9 +20,24 @@
     <div class="content">
     	<div class="content_top">
     		<div class="heading">
-    		<h3>Latest from <?php 
+    		<h3><?php 
     			if($catName) {
-    				echo $catName->fetch_assoc()['catName'];
+    				$catLang = $_SESSION['lang'];
+                                            switch ($catLang) {
+                                                case 'japanese':
+                                                    echo $catName->fetch_assoc()['catNameJp'];
+                                                    break;
+                                                case 'english':
+                                                    echo $catName->fetch_assoc()['catName'];
+                                                    break;
+                                                case 'vietnamese':
+                                                    echo $catName->fetch_assoc()['catNameVn'];
+                                                    break;
+                                                default:
+                                                    case 'japanese':
+                                                    echo $catName->fetch_assoc()['catNameJp'];
+                                                    break;
+                                            }
     			}
     		?></h3>
     		</div>

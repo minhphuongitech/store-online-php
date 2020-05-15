@@ -310,7 +310,7 @@
 			$query = "SELECT tbl_product.*, tbl_category.catName, tbl_brand.brandName
 					 FROM tbl_product INNER JOIN tbl_category ON tbl_product.catId = tbl_category.catId
 					 INNER JOIN tbl_brand ON tbl_product.brandId = tbl_brand.brandId
-					 ORDER BY tbl_product.productId DESC
+					 ORDER BY tbl_product.productName ASC
 					 LIMIT $nextRecord,$itemsPerPage";
 			$result = $this->db->select($query);
 			return $result;

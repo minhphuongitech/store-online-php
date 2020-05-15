@@ -12,7 +12,7 @@
 ?>
         <div class="grid_10">
             <div class="box round first grid">
-                <h2>Thêm thương hiệu</h2>
+                <h2>Add New Brand</h2>
                <div class="block copyblock"> 
                  <?php 
                     if(isset($insertBrand)) {
