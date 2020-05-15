@@ -37,7 +37,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input value="<?php echo $prodResult['productName'] ?>" type="text" name="productName" placeholder="Enter Product Name..." class="medium" />
+                        <input maxlength="15" value="<?php echo $prodResult['productName'] ?>" type="text" name="productName" placeholder="Enter Product Name..." class="medium" />
                     </td>
                 </tr>
 				<tr>

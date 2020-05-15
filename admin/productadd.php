@@ -26,7 +26,7 @@
                         <label>Name</label>
                     </td>
                     <td>
-                        <input type="text" name="productName" placeholder="Enter Product Name..." class="medium" />
+                        <input maxlength="15" type="text" name="productName" placeholder="Enter Product Name..." class="medium" />
                     </td>
                 </tr>
 				<tr>
