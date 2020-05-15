@@ -51,7 +51,9 @@
 	    	<div class="slider-box-column">
 					<!-- <p class="time">New</p> -->
 					<div class="img-box">
-						<img src="admin/uploads/<?php echo $result['image'] ?>" alt="no image">
+						<!-- <img src="admin/uploads/<?php echo $result['image'] ?>" alt="no image"> -->
+						<?php $myImage = base64_encode($result['convertedImage']);?>
+                        <img width="200px" height="100px" src="data:image/jpeg;base64,<?php echo $myImage?>" />
 					</div>
 					<p class="detail"><?php echo $result['productName'] ?>
 						<a href="#" class="price"><?php echo Format::formatNumberAsCurrency($result['price']);
