@@ -4,8 +4,6 @@
     include  ($filepath.'/../config/config.php'); 
 ?>
 
-
-
 <?php
 Class Database{
    public $host   = DB_HOST;
@@ -16,9 +14,12 @@ Class Database{
  
    public $link;
    public $error;
- 
- //MySQL connect---------------------------
- private function connectDB(){
+
+public function __construct(){
+  $this->connectDB();
+ } 
+
+private function connectDB(){
    $this->link = new mysqli($this->host, $this->user, $this->pass, 
     $this->dbname);
    mysqli_set_charset($this->link,"utf8");
@@ -72,46 +73,4 @@ public function insert($query){
      return false;
     }
    }
-//MySQL connect---------------------------
-
-
-// //PosgreeSQL connect---------------------------
-//  public function __construct(){
-//   $this->connectDB();
-//  }
- 
-// //PosgreeSQL connect
-// private function connectDB(){
-//   $connStr = "host=$this->host port=5432 dbname=$this->dbname user=$this->user password=$this->pass";
-//   $conn = pg_connect($connStr) or die('Connection failed');
-//   return $conn;
-//  }
-
-//  // Select or Read data
-// public function select($query){
-//   $result = pg_query($conn, $query);
-//   if($result){
-//     return $result;
-//   } else {
-//     return false;
-//   }
-//  }
-
-//  // Insert data
-// public function insert($query){
-//   return $this->select($query);
-// }
-
-
-// // Update data
-//  public function update($query){
-//    return $this->select($query);
-//  }
-  
-// // Delete data
-//  public function delete($query){
-//   return $this->select($query);
-//  }
-//  //PosgreeSQL connect---------------------------
-
 }
