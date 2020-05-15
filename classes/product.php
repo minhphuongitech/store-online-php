@@ -315,6 +315,7 @@
 				return $alert;
 			} else {
 				if(!empty($file_name)) {// upload new image
+					move_uploaded_file($file_temp, $uploaded_image);
 						if($file_size > 2097152) {// file size > 2MB
 							$alert = "<span class='error'>Image size must be less than 2Mb!</span>";
 							return $alert;
@@ -322,10 +323,12 @@
 							$alert = "<span class='error'>You can only upload:".implode(', ', $permited)."!</span>";
 							return $alert;
 						}
+						$convertedImg = addslashes(file_get_contents("../admin/".$uploaded_image));
 						$query = "UPDATE tbl_slider 
 									SET sliderName = '$title', 
 										sliderImage = '$unique_image', 
-										status = $status
+										status = $status,
+										convertedSliderImage = '$convertedImg'
 									WHERE sliderId = $sliderId";
 					} else {
 						$query = "UPDATE tbl_slider 
@@ -333,7 +336,7 @@
 										status = $status
 									WHERE sliderId = $sliderId";
 					}
-					move_uploaded_file($file_temp, $uploaded_image);
+					
 					$result = $this->db->update($query);
 					if($result == true) {
 						$alert = "<span class='success'>Update slider successfully</span>";
