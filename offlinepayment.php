@@ -156,11 +156,11 @@
 		    				<td>:</td>
 		    				<td><?php echo $result['name']?></td>
 		    			</tr>
-		    			<tr>
+		    			<!-- <tr>
 		    				<td><?= _CITY?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['city']?></td>
-		    			</tr>
+		    			</tr> -->
 		    			<tr>
 		    				<td><?= _ADDRESS?></td>
 		    				<td>:</td>
@@ -171,11 +171,11 @@
 		    				<td>:</td>
 		    				<td><?php echo $result['phone']?></td>
 		    			</tr>
-		    			<tr>
+		    			<!-- <tr>
 		    				<td><?= _ZIPCODE?></td>
 		    				<td>:</td>
 		    				<td><?php echo $result['zipcode']?></td>
-		    			</tr>
+		    			</tr> -->
 		    			<tr>
 		    				<td><?= _EMAIL?></td>
 		    				<td>:</td>
