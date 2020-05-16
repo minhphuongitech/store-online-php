@@ -79,7 +79,7 @@
 							<tr>
 								<th style="font-size: 16px" width="5%"><?= _NO?></th>
 								<th style="font-size: 16px" width="35%"><?= _PRODUCT_NAME?></th>
-								<th style="font-size: 16px" width="10%"><?= _IMAGE?></th>
+								<!-- <th style="font-size: 16px" width="10%"><?= _IMAGE?></th> -->
 								<th style="font-size: 16px" width="20%"><?= _PRICE?></th>
 								<th style="font-size: 16px" width="5%"><?= _QUANTITY?></th>
 								<th style="font-size: 16px" width="25%"><?= _TOTAL_PRICE?></th>
@@ -96,7 +96,7 @@
 							<tr>
 								<td><?php echo $i ?></td>
 								<td><?php echo $result['productName'] ?></td>
-								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
+								<!-- <td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td> -->
 								<td><?php echo $result['price']; $totalPrice+=$result['price'] ?></td>
 								<td><?php echo $result['quantity'] ?>
 								</td>
