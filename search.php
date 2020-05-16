@@ -93,7 +93,7 @@
 								<th style="font-size: 16px" width="20%"><?= _PRODUCT_NAME?></th>
 								<th style="font-size: 16px" width="10%"><?= _BRAND?></th>
 								<th style="font-size: 16px" width="10%"><?= _CATEGORY?></th>
-								<th style="font-size: 16px" width="15%"><?= _IMAGE?></th>
+								<!-- <th style="font-size: 16px" width="15%"><?= _IMAGE?></th> -->
 								<th style="font-size: 16px" width="20%"><?= _PRICE?></th>
 								<th style="font-size: 16px" width="20%"><?= _ACTION?></th>
 							</tr>
@@ -108,7 +108,7 @@
 								<td><?php echo $result['productName'] ?></td>
 								<td><?php echo $result['brandName'] ?></td>
 								<td><?php echo $result['catName'] ?></td>
-								<td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
+								<!-- <td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td> -->
 								<td><?php echo $result['price']; ?></td>
 								<td><a href="details.php?productid=<?php echo $result['productId'] ?>"> <?= _VIEW?> </a></td>
 							</tr>
