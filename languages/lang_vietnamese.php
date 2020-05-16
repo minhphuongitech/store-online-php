@@ -1,4 +1,5 @@
 <?php 
+	//https://makitweb.com/implement-multi-language-support-to-website-with-php/
 	define('_HOME', 'Trang Chủ');
 	define('_NAME', 'Tên');
 	define('_USERNAME', 'Tên Đăng Nhập');
@@ -52,7 +53,6 @@
 	define('_SENT_DATE', 'Ngày Gửi');
 	define('_ORDERED', 'Đã Mua');
 	define('_CURRENCY_UNIT', 'đ');
-
 	define('_FEATURE_PRODUCTS', 'Sản Phẩm Nổi Bật');
 	define('_NEW_PRODUCTS', 'Sản Phẩm Mới');
 	define('_ALL_PRODUCTS', 'Tất Cả');
@@ -74,13 +74,11 @@
 	define('_SAVE_TO_WISHLIST', 'Thêm Vào Yêu Thích');
 	define('_COMPARE_PRODUCT', 'Thêm Vào So Sánh');
 	define('_SENT_LIST', 'Danh Sách Đã Gửi');
-
 	define('_YOUR_DETAILS_ORDERED', 'Danh Sách Đơn Hàng');
 	define('_YOUR_COMPARE_PRODUCTS', 'Danh Sách So Sánh');
 	define('_YOUR_WISHLIST', 'Danh Sách Yêu Thích');
 	define('_PRODUCTS_LIST', 'Danh Sách Sản Phẩm');
 	define('_NO', 'Stt');
-
 	define('_PRODUCT_NAME', 'Tên Sản Phẩm');
 	define('_UPDATE', 'Cập Nhật');
 	define('_UPDATE_PROFILE', 'Cập Nhật Hồ Sơ');
@@ -97,7 +95,6 @@
 	define('_THE_TOTAL_PRICE_YOU_HAVE_BOUGHT', 'Tổng Giá Trị Đơn Hàng：');
 	define('_CLICK_HERE', 'Nhấn vào đây,');
 	define('_TO_VIEW_MORE_DETAILS', 'để xem chi tiết đơn hàng.');
-
 	define('_CONFIRM_EMAIL', 'Xác Nhận Mail');
 	define('_CONFIRM_PASSWORD', 'Mật Khẩu Xác Nhận');
 	define('_GENDER', 'Giới Tính');
@@ -105,7 +102,6 @@
 	define('_FEMALE', 'Nữ');
 	define('_OTHER', 'Khác');
 	define('_BIRTHDAY', 'Ngày Sinh');
-
 	define('_FIRSTNAME', 'Tên');
 	define('_LASTNAME', 'Họ');
 	define('_REGISTER_NEW_ACCOUNT', 'Đăng Ký Tài Khoản');
@@ -113,7 +109,6 @@
 	define('_VIEW_DETAILS', 'Chi tiết.');
 	define('_SIGN_IN_TEXT_DESC', 'Vui lòng nhập thông tin đăng nhập vào bên dưới.');
 	define('_IF_YOU_FORGOT_YOUR_PASSWORD', 'nhập địa chỉ email nếu bạn quên mật khẩu.');
-
 	define('_PASSWORD_NOT_MATCHED', 'Mật khẩu và xác nhận mật khẩu không khớp');
 	define('_CHECK_REQUIRED_FIELDS', 'Các hạng mục bắt buộc nhập đang bị trống');
 	define('_CHECK_BIRTHDAY_18_OR_OLDER', 'Chỉ khách hàng từ 18 đến 80 tuổi');
@@ -121,7 +116,6 @@
 	define('_CHECK_EMAIL_FORMAT', 'Email không hợp lệ');
 	define('_WEBSITE_TITLE', 'Cửa hàng PvSoft');
 	define('_ACC_REGISTRATION_COMPLETED', 'Đăng ký tài khoản thành công.');
-
 	define('_RESET_PASSWORD', 'Đặt lại mật khẩu');
 	define('_EMAIL_RESET_PASSWORD', 'Nhập email để đặt lại mật khẩu');
 	define('_EMAIL_NOT_EXIST', 'Email không tồn tại');
@@ -135,5 +129,4 @@
 	define('_CLICK_LINK_FROM_EMAL', 'Vui lòng truy cập vào trang này từ link trong email bạn nhận được.');
 	define('_PAGE_NOT_FOUND', 'Không tìm thấy trang truy cập.');
 	define('_UPDATE_CATEGORY', 'Sửa danh mục sản phẩm');
-	
 ?>

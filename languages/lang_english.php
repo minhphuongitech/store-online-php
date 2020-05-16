@@ -1,4 +1,5 @@
 <?php 
+	//https://makitweb.com/implement-multi-language-support-to-website-with-php/
 	define('_HOME', 'Home');
 	define('_NAME', 'Name');
 	define('_USERNAME', 'Username');
@@ -52,7 +53,6 @@
 	define('_SENT_DATE', 'Sent Date');
 	define('_ORDERED', 'Ordered');
 	define('_CURRENCY_UNIT', 'usd');
-
 	define('_FEATURE_PRODUCTS', 'Feature Products');
 	define('_NEW_PRODUCTS', 'New Products');
 	define('_ALL_PRODUCTS', 'All Products');
@@ -74,13 +74,11 @@
 	define('_SAVE_TO_WISHLIST', 'Save to Wishlist');
 	define('_COMPARE_PRODUCT', 'Compare Product');
 	define('_SENT_LIST', 'Sent List');
-
 	define('_YOUR_DETAILS_ORDERED', 'Your Details Ordered');
 	define('_YOUR_COMPARE_PRODUCTS', 'Your Compare Products');
 	define('_YOUR_WISHLIST', 'Your Wishlist');
 	define('_PRODUCTS_LIST', 'Products list');
 	define('_NO', 'No.');
-
 	define('_PRODUCT_NAME', 'Product Name');
 	define('_UPDATE', 'Update');
 	define('_UPDATE_PROFILE', 'Update Profile');
@@ -97,7 +95,6 @@
 	define('_THE_TOTAL_PRICE_YOU_HAVE_BOUGHT', 'The total price you have bought:');
 	define('_CLICK_HERE', 'Click here,');
 	define('_TO_VIEW_MORE_DETAILS', 'to view more details.');
-
 	define('_CONFIRM_EMAIL', 'Confirm Email');
 	define('_CONFIRM_PASSWORD', 'Confirm Password');
 	define('_GENDER', 'Gender');
@@ -105,7 +102,6 @@
 	define('_FEMALE', 'Female');
 	define('_OTHER', 'Other');
 	define('_BIRTHDAY', 'Birthday');
-
 	define('_FIRSTNAME', 'First Name');
 	define('_LASTNAME', 'Last Name');
 	define('_REGISTER_NEW_ACCOUNT', 'Register New Account');
@@ -113,7 +109,6 @@
 	define('_VIEW_DETAILS', 'View Details.');
 	define('_SIGN_IN_TEXT_DESC', 'Sign in with the form below.');
 	define('_IF_YOU_FORGOT_YOUR_PASSWORD', 'if you forgot your password just enter your email.');
-	
 	define('_PASSWORD_NOT_MATCHED', 'Password and confirm password does not match');
 	define('_CHECK_REQUIRED_FIELDS', 'All required fields must be filled out');
 	define('_CHECK_BIRTHDAY_18_OR_OLDER', 'Only people from 18 ~ 80 years old');
@@ -129,11 +124,9 @@
 	define('_CURRENT_PASSWORD', 'Current password');
 	define('_NEW_PASSWORD', 'New password');
 	define('_UPDATE_PASSWORD_TEXT_DESC', 'Please input into the form below.');
-
 	define('_UPDATE_PASSWORD_SUCCESS', 'New password updated successfully.');
 	define('_UPDATE_PASSWORD_FAILED', 'New password update failed.');
 	define('_CLICK_LINK_FROM_EMAL', 'Please access this page from link in email which has been to you.');
 	define('_PAGE_NOT_FOUND', 'Page is not found.');
 	define('_UPDATE_CATEGORY', 'Update category');
-	
 ?>

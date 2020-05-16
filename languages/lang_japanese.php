@@ -7,7 +7,6 @@
 	define('_EMAIL', 'メール');
 	define('_ADDRESS', '住所');
 	define('_PHONE', '電話番号');
-	define('_MOBILE_PHONE', '携帯電話');
 	define('_ZIPCODE', '郵便番号');
 	define('_SUBMIT', '申請');
 	define('_PRODUCTS', '商品');
@@ -32,7 +31,6 @@
 	define('_SUBJECT', '件名');
 	define('_FOLLOW_US', 'フォロー');
 	define('_ABOUT_US', '弊社について');
-	define('_COMPANY_INFO', '会社情報');
 	define('_YOUR_CART', 'カート');
 	define('_IMAGE', '画像');
 	define('_QUANTITY', '数量');
@@ -55,7 +53,6 @@
 	define('_SENT_DATE', '送信日');
 	define('_ORDERED', '注文済み');
 	define('_CURRENCY_UNIT', '円');
-
 	define('_FEATURE_PRODUCTS', 'オススメ商品');
 	define('_NEW_PRODUCTS', '新着商品');
 	define('_ALL_PRODUCTS', 'すべて');
@@ -77,13 +74,11 @@
 	define('_SAVE_TO_WISHLIST', '気に入りの一覧に追加');
 	define('_COMPARE_PRODUCT', '比較の一覧に追加');
 	define('_SENT_LIST', '送信済みの一覧');
-
 	define('_YOUR_DETAILS_ORDERED', '注文済みの一覧');
 	define('_YOUR_COMPARE_PRODUCTS', '比較商品の一覧');
 	define('_YOUR_WISHLIST', 'お気に入りの一覧');
 	define('_PRODUCTS_LIST', '商品の一覧');
 	define('_NO', '番号');
-
 	define('_PRODUCT_NAME', '商品名');
 	define('_UPDATE', '更新');
 	define('_UPDATE_PROFILE', 'プロファイル更新');
@@ -100,7 +95,6 @@
 	define('_THE_TOTAL_PRICE_YOU_HAVE_BOUGHT', '購入した合計金額：');
 	define('_CLICK_HERE', 'ここをクリックして、');
 	define('_TO_VIEW_MORE_DETAILS', '詳しくご確認ください。');
-
 	define('_CONFIRM_EMAIL', '確認メール');
 	define('_CONFIRM_PASSWORD', '確認パスワード');
 	define('_GENDER', '性別');
@@ -108,7 +102,6 @@
 	define('_FEMALE', '女');
 	define('_OTHER', 'その他');
 	define('_BIRTHDAY', '生年月日');
-
 	define('_FIRSTNAME', '名');
 	define('_LASTNAME', '性');
 	define('_REGISTER_NEW_ACCOUNT', '新規登録');
@@ -116,7 +109,6 @@
 	define('_VIEW_DETAILS', '詳しくご確認ください。');
 	define('_SIGN_IN_TEXT_DESC', '以下のフォームにログイン情報をご入力ください。');
 	define('_IF_YOU_FORGOT_YOUR_PASSWORD', 'パスワードを忘れた場合はメールアドレスを入力してください。');
-
 	define('_PASSWORD_NOT_MATCHED', 'パスワードと確認パスワードが一致しません');
 	define('_CHECK_REQUIRED_FIELDS', '必須項目には入力する必要があります');
 	define('_CHECK_BIRTHDAY_18_OR_OLDER', '１８～８０歳になっている方しかありません');
